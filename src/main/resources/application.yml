@@ -1,0 +1,10 @@
+# Disable accessing services using service name (i.e. greeting-service).
+# They should be only accessed through the path defined below.
+# Map paths to services
+zuul:
+  ignored-services: '*'
+  routes:
+    greeting-service:
+      path: /api/greetings/**
+      service-id: greeting-service
+      strip-prefix: false
