@@ -40,6 +40,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         .hasRole("ADMIN")
         .antMatchers(HttpMethod.POST, "/api/authors/**")
         .hasRole("ADMIN")
+        .antMatchers(HttpMethod.GET, "/api/books/**")
+        .permitAll()
         .anyRequest()
         .authenticated();
   }
