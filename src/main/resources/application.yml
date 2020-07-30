@@ -5,12 +5,16 @@ zuul:
 
   # Map paths to services
   routes:
-    greeting-service:
-      path: /api/greetings/**
-      service-id: greeting-service
-      strip-prefix: false
     auth-service:
       path: /api/auth/**
       service-id: auth-service
       strip-prefix: false
       sensitive-headers: Cookie,Set-Cookie
+    greeting-service:
+      path: /api/greetings/**
+      service-id: greeting-service
+      strip-prefix: false
+    author-service:
+      path: /api/authors/**
+      service-id: author-service
+      strip-prefix: false
