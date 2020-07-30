@@ -9,13 +9,13 @@ import org.springframework.stereotype.Component;
 import javax.servlet.http.HttpServletRequest;
 
 @Component
-public class ZuulPreFilter extends ZuulFilter {
+public class ZuulJwtPreFilter extends ZuulFilter {
 
-  private static final Logger logger = LoggerFactory.getLogger(ZuulPreFilter.class);
+  private static final Logger logger = LoggerFactory.getLogger(ZuulJwtPreFilter.class);
 
   private final JwtConfig jwtConfig;
 
-  public ZuulPreFilter(JwtConfig jwtConfig) {
+  public ZuulJwtPreFilter(JwtConfig jwtConfig) {
     this.jwtConfig = jwtConfig;
   }
 

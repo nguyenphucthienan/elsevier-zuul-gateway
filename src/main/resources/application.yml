@@ -18,6 +18,10 @@ zuul:
       path: /api/authors/**
       service-id: author-service
       strip-prefix: false
+    inventory-service:
+      path: /api/books/*/inventories
+      service-id: inventory-service
+      strip-prefix: false
     book-service:
       path: /api/books/**
       service-id: book-service
