@@ -6,16 +6,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class JwtConfig {
 
-  @Value("${security.jwt.uri:/api/auth/**}")
+  @Value("${security.jwt.authUri}")
   private String authUri;
 
-  @Value("${security.jwt.header:Authorization}")
+  @Value("${security.jwt.header}")
   private String header;
 
-  @Value("${security.jwt.prefix:Bearer }")
+  @Value("${security.jwt.prefix}")
   private String prefix;
 
-  @Value("${security.jwt.secret:ElsevierJwtSecretKey}")
+  @Value("${security.jwt.secret}")
   private String secret;
 
   public String getAuthUri() {
